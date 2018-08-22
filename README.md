@@ -5,4 +5,5 @@ This is the developed version of https://github.com/miniTWOWHostingHelperWebApp/
 * This version do what the old version does, but it's object-oriented!
 
 # Request Definition
-*This section is coming soon....*
+The image below is how the class should be made.
+![Here it is.](https://raw.githubusercontent.com/miniTWOWHostingHelperWebApp/miniTWOWScoreCalculatorButInCpp2/master/ClassFigure.png)
