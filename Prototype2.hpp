@@ -10,12 +10,15 @@ enum Option{
 	Lowest = 2,
 };
 
+struct Submission{
+	string Submitter;
+	string Submission;
+};
+
 class Data{
 	private:
-		vector<string> votes;
 		int n;
-		vector<double> average;
-		vector<double>	std;
+		vector<Submission> submission;
 	public:
 		Data(){
 			n=0;
