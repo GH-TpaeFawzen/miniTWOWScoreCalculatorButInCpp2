@@ -153,15 +153,48 @@ int main(int argc, char* argv[]){
 	
 	cout << "From now, you must input all the votes. You must separate each vote by space.\n";
 	
-	for(int i=0; i<n; i++){
-		
-	}
+	
 	
 	return 0;
 }
 
 /*
-each vote by space.\n";
+int main(int argc, char* argv[]){
+	bool debug=false;
+	if(argc==2){
+		string tmp = argv[1];
+		if(tmp=="-d"){
+			cout << "Since -d got input, this is running as debug mode.\n";
+			debug = true;
+		}
+	}
+	
+	cout << "This program is for single voting screen." << endl;
+	cout << "How many responses? : ";
+	int n;	//how many responses?
+	cin >> n;
+	if(n<2||n>27){
+		//Error
+		cout << "That seems too few/many.\n";
+	}else{
+		int v;	//how many votes to input?
+		
+		cout << "How many votes? :";
+		cin >> v;
+		if(v<1){
+			cout << "What?! Then this program is inappropriate for that case.\n";
+		}else{
+			int optnum;
+			do{
+			cout << "What do you do with votes having same characters twice?\nInput 0 to make them invalid.\nInput 1 to count the highest one.\nInput 2 to count the lowest one.\n :";
+			cin >> optnum;
+			if(0>optnum&&optnum>2)
+				cout << "That's a valid input!\n\n";
+			}while(0>optnum&&optnum>2);
+			Option option=(Option)optnum;
+			
+			
+			cout << "From now, you must input all the votes. You must separate each vote by space.\n";
 			double ms[v][n]={0};	//mini-scores
 			unsigned valids = 0;	//how many valid votes?
 			
